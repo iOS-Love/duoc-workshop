@@ -12,7 +12,7 @@
 # Sesiones
 
 - [Sesión 01: Introducción a Swift](sesiones/01)
-- [Sesión 02](sesiones/02)
+- [Sesión 02: Continuación de introducción a Swift + Tic Tac Toe](sesiones/02)
 - [Sesión 03](sesiones/03)
 - [Sesión 04](sesiones/04)
 - [Sesión 05](sesiones/05)
