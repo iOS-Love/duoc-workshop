@@ -10,17 +10,55 @@
  ## Sintaxis:
  */
 
-protocol SomeProtocol { }
-protocol SomeOtherProtocol { }
+protocol SomeProtocol {
+    //var foo: Int { get }
+}
+protocol SomeOtherProtocol {
+    //var foo: String { get }
+}
 
 struct MyStruct: SomeProtocol, SomeOtherProtocol { }
-
 //: ## Propiedades. De instancia, de tipo.
+protocol PropertyProtocol {
+    var isProtocol: Bool { get }
+}
 
+class MyClassImplementsProtocol: PropertyProtocol {
+    var isProtocol: Bool {
+        return false
+    }
+}
 //: ## Métodos
+protocol MyProtocolWithMethod {
+    var isProtocol: Bool { get }
+    static func myMethod()
+}
 
+class MyClassImplementsAnotherProtocol: MyProtocolWithMethod {
+    var isProtocol: Bool = true
+
+    static func myMethod() {
+
+    }
+}
 //: ## Inicializadores
+protocol AnotherOneWithInit {
+    init(string: String)
+}
 
+class SomeClassImplementsInit: AnotherOneWithInit {
+    required init(string: String) { }
+}
+
+struct AnotherStruct {
+    let name: String
+
+    init(name: String) {
+        self.name = name
+    }
+}
+
+let myStruct = AnotherStruct(name: "-")
 /*:
  # Los protocolos son **Tipos**:
  
@@ -31,6 +69,28 @@ struct MyStruct: SomeProtocol, SomeOtherProtocol { }
  
  ## Ejemplo:
  */
+protocol MyExampleProtocol {
+    var name: String { get }
+}
+
+struct MyExampleStruct: MyExampleProtocol {
+    let name: String
+    let age: Int
+
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+let array: [MyExampleProtocol] = []
+
+func myReturningFunction() -> MyExampleProtocol {
+    return MyExampleStruct(name: "Francisco", age: 29)
+}
+
+let myReturningValue = myReturningFunction()
+myReturningValue.name
 
 
 //: [Siguiente](@next)

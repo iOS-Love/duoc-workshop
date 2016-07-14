@@ -22,13 +22,39 @@
  */
 
 //: ### Funciones
+private func privateFoo() {}
+internal func internalFoo() {}
+public func publicFoo() {}
 
+func someFoo() { }
 //: ### Variables
-
+private var privateBar: Int = 0
+internal var internalBar: Int = 0
 //: ### Clases
+internal class InternalClass {
+    static func myStaticFunc() {
 
+    }
+
+    func myInternalFunc() {
+        privateFoo()
+        internalFoo()
+    }
+}
+
+let myClass = InternalClass()
+InternalClass.myStaticFunc()
 //: ### Protocolos
-
+internal protocol MyProtocol {}
 //: ### Ejemplo:
+class PublicClass {
+    static func staticFoo() {
 
+    }
+
+    private func foo() {
+        privateFoo()
+        internalFoo()
+    }
+}
 //: [Siguiente](@next)
