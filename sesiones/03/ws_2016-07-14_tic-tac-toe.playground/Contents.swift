@@ -30,7 +30,6 @@ struct Coordinate {
     }
 }
 
-
 protocol VisualRepresentable {
     var visualRepresentation: String { get }
 }
@@ -45,8 +44,8 @@ struct Board {
         items = Array(count: size, repeatedValue: row)
     }
     
-    //Nos permite acceder a las marcas como si el tablero fuera un arreglo o diccionario utilizando como llave una coordinada
-    //Game().board[Coordinate(row: 0, column: 0)]
+    //Nos permite acceder a las marcas como si el tablero fuera un arreglo o diccionario utilizando como llave una coordenada
+    //Ejemplo: Game().board[Coordinate(row: 0, column: 0)]
     subscript(coordinate: Coordinate) -> Mark? {
         set {
             setMark(newValue, at: coordinate)
