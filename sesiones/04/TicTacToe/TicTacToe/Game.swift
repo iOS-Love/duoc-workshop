@@ -19,7 +19,10 @@ class Game {
     var currentPlayer: Player
     var state: GameState = .inProgress
 
-    init(playerOne: Player, playerTwo: Player) {
+    init?(playerOne: Player, playerTwo: Player) {
+        guard playerOne.mark != playerTwo.mark else {
+            return nil
+        }
         self.playerOne = playerOne
         self.playerTwo = playerTwo
         self.currentPlayer = playerOne

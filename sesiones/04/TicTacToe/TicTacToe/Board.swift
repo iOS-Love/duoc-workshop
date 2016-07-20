@@ -39,13 +39,7 @@ struct Board {
     }
 
     func column(at index: Int) -> [Mark?] {
-        var columns: [Mark?] = []
-        for row in items {
-            let mark = row[index]
-            columns.append(mark)
-        }
-        return columns
-        //return items.map { $0[index] }
+        return items.map { $0[index] }
     }
 
     func diagonal(diagonal: Diagonal) -> [Mark?] {
