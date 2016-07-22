@@ -15,5 +15,8 @@
 - [Sesión 02: Continuación de introducción a Swift + Tic Tac Toe](sesiones/02)
 - [Sesión 03: Tic Tac Toe](sesiones/03)
 - [Sesión 04: Tic Tac Toe final - Proyecto Xcode](sesiones/04)
-- [Sesión 05](sesiones/05)
+- [Sesión 05: Tic Tac Toe app en Xcode](sesiones/05)
 - [Sesión 06](sesiones/06)
+
+# Feedback
+[Encuesta Final de Curso](http://goo.gl/forms/n7BzGzndt6Rtq5ss2)
